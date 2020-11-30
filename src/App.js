@@ -91,7 +91,9 @@ class App extends Component {
           <Route
             exact
             path="/"
-            render={() => <BookmarkList bookmarks={bookmarks} />}
+            render={(rprops) => (
+              <BookmarkList bookmarks={bookmarks} {...rprops} />
+            )}
           />
         </div>
       </main>
